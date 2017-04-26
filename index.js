@@ -1,13 +1,14 @@
 /**
  * Created by axetroy on 17-4-26.
  */
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.get('/', function(req, res) {
   res.send('Hello World, Here are Heroku');
 });
 
-app.listen(80, function() {
-  console.log('Listen the port: 80');
+app.listen(PORT, function() {
+  console.log(`Listen the port: ${PORT}`);
 });
